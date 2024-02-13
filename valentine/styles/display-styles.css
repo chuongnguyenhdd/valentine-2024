@@ -1,0 +1,304 @@
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #edd8c6;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#displayTitle {
+  height: 15%;
+  font-size: 80px;
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+}
+
+#displayTitle:hover {
+  cursor: default;
+}
+
+#displayImg {
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#displayImg:hover {
+  cursor: pointer;
+}
+
+#msgBackgroundEffect {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+
+  width: 500px;
+  opacity: 0;
+}
+
+#msgContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 16%;
+  margin-top: auto;
+  margin-bottom: 10px;
+  border-bottom: black 1px solid;
+  border-top: black 1px solid;
+  opacity: 0;
+}
+
+.arrow {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.1s;
+  font-family: "Zapf Dingbats" !important;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+#leftArrow {
+  left: 0;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+#leftArrow:active {
+  scale: 1.1;
+}
+
+#rightArrow {
+  right: 0;
+}
+
+#rightArrow:active {
+  scale: 1.1;
+}
+
+#noteTarget {
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+#noteTarget:hover {
+  cursor: pointer;
+}
+
+.ml6 {
+  font-family: "Indie Flower", cursive;
+  position: relative;
+  font-size: 28px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.noteInfo {
+  font-family: "Indie Flower", cursive;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+}
+
+#noteDate {
+  left: 0;
+}
+
+#notePosition {
+  right: 0;
+}
+
+#liveTimer {
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  padding: 0 0 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.doNotSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#flowerCanvas {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+/* ==== Mobile Styles ====*/
+
+@media only screen and (max-width: 600px) {
+  .arrow {
+    font-size: 30px;
+  }
+
+  #wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #displayTitle {
+    font-size: 50px;
+    margin-top: 10px;
+  }
+
+  #msgContainer {
+    width: 95%;
+  }
+
+  .ml6 {
+    font-size: 18px;
+  }
+
+  #liveTimer {
+    font-size: 14px;
+  }
+
+  .noteInfo {
+    font-size: 10px;
+  }
+}
+
+/* ==== Tablet Styles ====*/
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .arrow {
+    font-size: 40px;
+  }
+
+  #displayTitle {
+    font-size: 50px;
+    margin-top: 10px;
+  }
+
+  #msgContainer {
+    width: 80%;
+  }
+
+  .ml6 {
+    font-size: 20px;
+  }
+
+  #liveTimer {
+    font-size: 16px;
+  }
+
+  .noteInfo {
+    font-size: 12px;
+  }
+}
+
+/* ==== Animations ====*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.music {
+  display: none;
+}

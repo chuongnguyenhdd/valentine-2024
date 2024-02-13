@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/display-styles.css" />
+    <link rel="stylesheet" href="./styles/snackbar-styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="icon" href="./assets/heart.png" />
+    <title>Ly</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div
+        id="displayTitle"
+        class="doNotSelect"
+        style="animation: 3s ease-in-out 0s 1 normal forwards running fadeIn2"
+      >
+        Nguyễn Hoàng Ly
+      </div>
+
+      <img
+        id="displayImg"
+        class="doNotSelect"
+        src="./flowers/sunflower.gif"
+        alt=""
+        style="animation: 2s ease-in-out 0s 1 normal forwards running fadeIn2"
+      />
+      <div id="flowerCanvas"></div>
+      <img id="msgBackgroundEffect" src="./assets/hearts.gif" alt="" />
+
+      <div
+        id="msgContainer"
+        style="animation: 3s ease-in-out 0s 1 normal forwards running fadeIn2"
+      >
+        <h1 class="ml6">
+          <span class="text-wrapper">
+            <span id="noteTarget" class="letters fade"
+              >Wishing you a day filled with love and joy on Valentine's Day
+              💖</span
+            >
+            <span id="noteTarget" class="letters fade">Like you and me</span>
+            <span id="noteTarget" class="letters fade"
+              >some things are just meant to be</span
+            >
+          </span>
+        </h1>
+
+        <div id="noteDate" class="noteInfo">2 / 14 / 2024</div>
+        <div id="notePosition" class="noteInfo">4 / 4</div>
+      </div>
+
+      <div id="snackbar"></div>
+      <audio
+        controls
+        loop
+        class="music"
+        id="audio"
+        autoplay="true"
+        muted="muted"
+      >
+        <source src="./assets/mp3/songs.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="script.js"></script>
+  </body>
+</html>
